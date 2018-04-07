@@ -15,6 +15,7 @@
         <module>service1</module>
         <module>reverse-proxy</module>
         <module>config-server</module>
+        <module>user</module>
     </modules>
 
     <!--以下dependency来自官方-->
@@ -58,6 +59,19 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+            <!--<groupId>mysql</groupId>-->
+            <!--<artifactId>mysql-connector-java</artifactId>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
     </dependencies>
 
 </project>
