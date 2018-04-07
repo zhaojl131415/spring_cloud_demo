@@ -1,0 +1,14 @@
+server:
+  port: 8092
+
+
+student:
+  name: ye
+  age: 29
+  context: "${student.name} ----- ${student.age}; "
+
+
+student_context: "name: ${student.name}, age: ${student.age}"
+
+
+

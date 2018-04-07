@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.129.207.185:3306/test
+    username: root
+    password: zhanjob
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    ROOT: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BaseBinder: TRACE
+    org.hibernate.type.descriptor.sql.BASEEXTRACTOR: TRACE
+    com.itmuch: DEBUG
