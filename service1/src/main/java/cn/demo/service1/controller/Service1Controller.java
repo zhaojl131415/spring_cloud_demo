@@ -7,12 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @Author: Leo
- * @Blog: http://blog.csdn.net/lc0817
- * @CreateTime: 2017/1/19 14:21
- * @Description:
- */
 @RestController
 public class Service1Controller extends AbstractController {
     public static class User {

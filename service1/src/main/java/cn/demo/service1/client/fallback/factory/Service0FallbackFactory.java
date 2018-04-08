@@ -6,12 +6,6 @@ import feign.hystrix.FallbackFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 
-/**
- * @Author: Leo
- * @Blog: http://blog.csdn.net/lc0817
- * @CreateTime: 2017/3/22 14:44
- * @Description:
- */
 @Component
 public class Service0FallbackFactory implements FallbackFactory<Service0Client> {
 

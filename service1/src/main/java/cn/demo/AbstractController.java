@@ -6,12 +6,6 @@ import org.springframework.web.context.request.WebRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @Author: Leo
- * @Blog: http://blog.csdn.net/lc0817
- * @CreateTime: 2017/3/27 10:47
- * @Description: 统一异常处理, 将controller继承该类, 即可.
- */
 public abstract class AbstractController {
 
 
