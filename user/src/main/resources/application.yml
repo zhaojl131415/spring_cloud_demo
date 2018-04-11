@@ -10,7 +10,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+  application:
+    name: user
 logging:
   level:
     ROOT: INFO
@@ -18,3 +19,10 @@ logging:
     org.hibernate.type.descriptor.sql.BaseBinder: TRACE
     org.hibernate.type.descriptor.sql.BASEEXTRACTOR: TRACE
     com.itmuch: DEBUG
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}

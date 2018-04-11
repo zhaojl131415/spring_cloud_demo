@@ -1,5 +1,11 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: zhao
 server:
-  port: 8080 # 注册中心占用8080端口
+  port: 8761 # 注册中心占用8080端口
 eureka:
   instance:
     hostname: localhost
@@ -7,4 +13,6 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/  #其实就是 http://localhost:8080/eureka/
+      defaultZone: http://admin:zhao@${eureka.instance.hostname}:${server.port}/eureka/
+    healthcheck:
+      enabled: true
