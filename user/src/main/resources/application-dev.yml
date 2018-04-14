@@ -1,7 +1,6 @@
 server:
   port: 8091
 
-
 student:
   name: zhao
   age: 28
@@ -9,6 +8,10 @@ student:
 
 
 student_context: "name: ${student.name}, age: ${student.age}"
+
+spring:
+  application:
+    name: user
 
 
 

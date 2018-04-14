@@ -10,8 +10,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-  application:
-    name: user
 logging:
   level:
     ROOT: INFO
@@ -21,6 +19,8 @@ logging:
     com.itmuch: DEBUG
 eureka:
   client:
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: http://admin:zhao@localhost:8761/eureka/
   instance:

@@ -1,9 +1,9 @@
 spring:
   application:
-    name: movie
+    name: movie-ribbon-customizing
 
 server:
-  port: 8070
+  port: 8072
 
 eureka:
   client:
@@ -13,3 +13,7 @@ eureka:
       defaultZone: http://admin:zhao@localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

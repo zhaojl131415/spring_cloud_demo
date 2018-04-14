@@ -1,17 +1,17 @@
 server:
-  port: 8093
-
+  port: 8094
 
 student:
-  name: dong
-  age: 30
+  name: zhao
+  age: 28
   context: "${student.name} ----- ${student.age}; "
 
 
 student_context: "name: ${student.name}, age: ${student.age}"
 
-
-
 spring:
   application:
-    name: user2
+    name: user
+
+
+

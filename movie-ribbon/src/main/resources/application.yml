@@ -1,9 +1,9 @@
 spring:
   application:
-    name: movie
+    name: movie-ribbon
 
 server:
-  port: 8070
+  port: 8071
 
 eureka:
   client:

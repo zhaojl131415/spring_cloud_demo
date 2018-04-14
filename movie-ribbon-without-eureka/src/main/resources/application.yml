@@ -1,9 +1,9 @@
 spring:
   application:
-    name: movie
+    name: movie-ribbon-without-eureka
 
 server:
-  port: 8070
+  port: 8073
 
 eureka:
   client:
@@ -13,3 +13,10 @@ eureka:
       defaultZone: http://admin:zhao@localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+
+ribbon:
+  eureka:
+   enabled: false
+user:
+  ribbon:
+    listOfServers: localhost:8091
