@@ -16,6 +16,8 @@
         <module>gateway</module>
         <module>config-server</module>
         <module>movie</module>
+        <module>movie-feign</module>
+        <module>movie-feign-customizing</module>
         <module>movie-ribbon</module>
         <module>movie-ribbon-customizing</module>
         <module>movie-ribbon-without-eureka</module>

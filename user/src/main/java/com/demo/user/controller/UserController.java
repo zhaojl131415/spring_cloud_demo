@@ -7,9 +7,7 @@ import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -26,6 +24,11 @@ public class UserController {
     @GetMapping("/get_user/{user_id}")
     public User findById(@PathVariable Integer user_id){
         return userRepository.findOne(user_id);
+    }
+
+    @PostMapping("/post_user")
+    public User postUser(@RequestBody User u){
+        return u;
     }
 
     @GetMapping("/eureka_instance")

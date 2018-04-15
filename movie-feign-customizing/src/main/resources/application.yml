@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: movie-feign-customizing
+
+server:
+  port: 8070
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+logging:
+  level:
+    com.demo.movie.client.UserFeignClient: debug
+
+# hystrix配置： https://github.com/Netflix/Hystrix/wiki/Configuration
+# Hystrix超时
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000  # 延长Hystrix的超时时间 默认1秒
+hystrix.command.default.execution.timeout.enabled: false #禁用Hystrix的超时
+#feign.hystrix.enabled: false #索性禁用Feign的Hystrix
