@@ -26,3 +26,7 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      zone: AAA
+      zhao: BBB
+    lease-renewal-interval-in-seconds: 5
