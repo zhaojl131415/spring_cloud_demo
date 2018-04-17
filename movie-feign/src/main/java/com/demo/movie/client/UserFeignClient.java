@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient("user")
 public interface UserFeignClient {
 
-//    @GetMapping("/get_user/{user_id}")
-    @RequestMapping(method = RequestMethod.GET, value = "/get_user/{user_id}")
+    @GetMapping("/get_user/{user_id}")
+//    @RequestMapping(method = RequestMethod.GET, value = "/get_user/{user_id}")
     User findById(@PathVariable("user_id") Integer user_id);
 
-    @RequestMapping(method = RequestMethod.POST, value = "/post_user")
-//    @PostMapping("/post_user")
+//    @RequestMapping(method = RequestMethod.POST, value = "/post_user")
+    @PostMapping("/post_user")
     User postUser(@RequestBody User u);
 
 //    @RequestMapping(method = RequestMethod.GET, value = "/stores")
