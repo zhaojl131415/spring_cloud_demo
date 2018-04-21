@@ -33,6 +33,6 @@ eureka:
       zone: AAA
       zhao: BBB
     lease-renewal-interval-in-seconds: 5
-    appname: user-zhao # 主要作用:填坑 swagger(api document)
-    hostname: peer1
+#    appname: user-zhao # 主要作用:填坑 swagger(api document)
+#    hostname: peer1
     ip-address: 127.0.0.1

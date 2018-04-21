@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: movie-ribbon-with-hystrix
+
+server:
+  port: 8071
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 40000  # feign 超时控制
