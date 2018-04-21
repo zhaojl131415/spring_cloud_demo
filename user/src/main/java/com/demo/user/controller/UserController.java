@@ -9,6 +9,9 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 @RestController
 public class UserController {
 
@@ -40,5 +43,14 @@ public class UserController {
     @GetMapping("/instance_info")
     public ServiceInstance showInfo() {
         return discoveryClient.getLocalServiceInstance();
+    }
+
+    @GetMapping("list_all")
+    public List<User> list(){
+        User u1 = new User(1, "zhao1");
+        User u2 = new User(2, "zhao2");
+        User u3 = new User(3, "zhao3");
+
+        return Arrays.asList(u1, u2, u3);
     }
 }

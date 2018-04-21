@@ -3,13 +3,15 @@ spring:
     active: dev
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.129.207.185:3306/test
+    url: jdbc:mysql://139.129.207.185:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: zhanjob
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+  application:
+    name: user
 logging:
   level:
     ROOT: INFO
@@ -23,10 +25,14 @@ eureka:
       enabled: true
     serviceUrl:
       defaultZone: http://admin:zhao@localhost:8761/eureka/
+#      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/ # http://admin:zhao@localhost:8761/eureka/
   instance:
-    prefer-ip-address: true
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+#    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
     metadata-map:
       zone: AAA
       zhao: BBB
     lease-renewal-interval-in-seconds: 5
+    appname: user-zhao # 主要作用:填坑 swagger(api document)
+    hostname: peer1
+    ip-address: 127.0.0.1

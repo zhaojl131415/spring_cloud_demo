@@ -11,6 +11,7 @@
 
     <modules>
         <module>registry</module>
+        <module>registry-ha</module>
         <module>service0</module>
         <module>service1</module>
         <module>gateway</module>
@@ -19,10 +20,26 @@
         <module>movie-feign</module>
         <module>movie-feign-customizing</module>
         <module>movie-ribbon</module>
+        <module>movie-ribbon-test</module>
         <module>movie-ribbon-customizing</module>
         <module>movie-ribbon-without-eureka</module>
         <module>user</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
     <!--以下dependency来自官方-->
     <parent>

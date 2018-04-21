@@ -10,6 +10,7 @@ public interface UserFeignClient {
     @GetMapping("/get_user/{user_id}")
 //    @RequestMapping(method = RequestMethod.GET, value = "/get_user/{user_id}")
     User findById(@PathVariable("user_id") Integer user_id);
+//    User findById(Integer user_id);
 
 //    @RequestMapping(method = RequestMethod.POST, value = "/post_user")
     @PostMapping("/post_user")

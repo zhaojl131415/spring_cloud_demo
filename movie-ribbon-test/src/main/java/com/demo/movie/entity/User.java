@@ -1,14 +1,6 @@
-package com.demo.user.bean;
+package com.demo.movie.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String username;
@@ -18,18 +10,6 @@ public class User {
     private String age;
 
     public User() {
-    }
-
-    public User(Integer id, String username, String name, String age) {
-        this.id = id;
-        this.username = username;
-        this.name = name;
-        this.age = age;
-    }
-
-    public User(Integer id, String username) {
-        this.id = id;
-        this.username = username;
     }
 
     public Integer getId() {

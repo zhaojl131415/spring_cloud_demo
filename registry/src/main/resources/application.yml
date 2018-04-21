@@ -5,8 +5,10 @@ security:
     name: admin
     password: zhao
 server:
-  port: 8761 # 注册中心占用8080端口
+  port: 8761
 eureka:
+  datacenter: cloud
+  environment: prod_zhao
   instance:
     hostname: localhost
   client:
@@ -16,3 +18,5 @@ eureka:
       defaultZone: http://admin:zhao@${eureka.instance.hostname}:${server.port}/eureka/
     healthcheck:
       enabled: true
+#  server:
+#    enable-self-preservation: false
