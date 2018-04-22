@@ -18,9 +18,11 @@
         <module>config-server</module>
         <module>movie</module>
         <module>movie-feign</module>
+        <module>movie-feign-with-hystrix</module>
         <module>movie-feign-customizing</module>
         <module>movie-ribbon</module>
         <module>movie-ribbon-with-hystrix</module>
+        <module>movie-ribbon-with-hystrix-propagation</module>
         <module>movie-ribbon-test</module>
         <module>movie-ribbon-customizing</module>
         <module>movie-ribbon-without-eureka</module>

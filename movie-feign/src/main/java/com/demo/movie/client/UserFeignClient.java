@@ -4,7 +4,7 @@ import com.demo.movie.entity.User;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("user")
+@FeignClient(name = "user")
 public interface UserFeignClient {
 
     @GetMapping("/get_user/{user_id}")

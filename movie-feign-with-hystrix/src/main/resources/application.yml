@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: movie-feign-with-hystrix
+
+server:
+  port: 8070
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
