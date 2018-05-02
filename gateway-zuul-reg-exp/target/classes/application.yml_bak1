@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+spring:
+  application:
+    name: gateway
+server:
+  port: 8020
+zuul:
+  ignored-services: movie-ribbon-with-hystrix
+  routes:
+    user: /u1/**
+    movie: /m/**
+

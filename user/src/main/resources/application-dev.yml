@@ -12,6 +12,3 @@ student_context: "name: ${student.name}, age: ${student.age}"
 spring:
   application:
     name: user
-
-
-

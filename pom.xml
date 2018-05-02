@@ -11,10 +11,12 @@
 
     <modules>
         <module>registry</module>
+        <module>hystrix-dashboard</module>
         <module>registry-ha</module>
         <module>service0</module>
         <module>service1</module>
         <module>gateway</module>
+        <module>gateway-zuul-reg-exp</module>
         <module>config-server</module>
         <module>movie</module>
         <module>movie-feign</module>

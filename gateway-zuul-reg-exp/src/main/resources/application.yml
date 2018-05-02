@@ -1,0 +1,15 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://admin:zhao@localhost:8761/eureka/
+spring:
+  application:
+    name: gateway-zuul-reg-exp
+server:
+  port: 8020
+zuul:
+  prefix: /get_user
+  strip-prefix: false
+logging:
+  level:
+    com.netflix: debug
