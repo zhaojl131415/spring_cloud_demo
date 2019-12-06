@@ -19,7 +19,7 @@ public class MovieRibbonWithHystrixController {
     @GetMapping("/get_movie/{user_id}")
     @HystrixCommand(fallbackMethod = "findByIdFallback")
     public User findById(@PathVariable Integer user_id) {
-        return rest.getForObject("http://user/get_user/" + user_id, User.class);
+        return rest.getForObject("http://user/get_user/{1}" + user_id, User.class, user_id);
     }
 
     // 回调方法 参数和返回值必须和原方法一样

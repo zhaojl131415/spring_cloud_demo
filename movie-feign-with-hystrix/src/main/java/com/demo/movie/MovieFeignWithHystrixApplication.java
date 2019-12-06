@@ -2,14 +2,16 @@ package com.demo.movie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
-@SpringBootApplication
-@EnableEurekaClient
-@EnableFeignClients
+//@SpringBootApplication
+//@EnableEurekaClient
 //@EnableCircuitBreaker
+@SpringCloudApplication
+@EnableFeignClients
 public class MovieFeignWithHystrixApplication {
 
 	public static void main(String[] args) {

@@ -8,12 +8,12 @@ spring:
 server:
   port: 8020
 zuul:
-#  ignored-services: movie-ribbon-with-hystrix
   routes:
-    user_zuul:
-      path: /u4/**
+    user:
+      path: /u/**
       service-id: user
 
+#  ignored-services: movie-ribbon-with-hystrix
 
 ribbon:
   eureka:
